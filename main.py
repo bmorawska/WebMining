@@ -28,7 +28,7 @@ def date_formatter(date: str) -> (str, str):
 
 FILENAME = 'short.csv'
 OUTPUT_FILENAME = 'data.arff'
-GRAPHIC_FILES = 'jpg|gif|bmp|xmb|png|jpeg|mpg'
+GRAPHIC_FILES = 'jpg|gif|bmp|xbm|png|jpeg|mpg'
 day_hour_separated = True
 
 with open(FILENAME) as f:

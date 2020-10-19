@@ -8,6 +8,9 @@
 * [X] Obciąć wybrany plik do 50000 rekordów
 * [X] Powtórzyć algorytmy analizy klastrowej i budowania reguł asocjacyjnych
 
+__Wybrane dane:__ ``NASA-HTTP.html`` -> Jul 01 to Jul 31, ASCII format, 20.7 MB gzip compressed.
+Jego skrócona wersja (do 50000 rekordów) to ``short.csv``.
+
 ### Ćwiczenie nr 2
 
 #### Zajęcia nr 2
@@ -15,8 +18,7 @@
 * [X] Wyodrębnić zmienne: data, godzina, metoda, adres strony, protokół
 * [X] Wybrać rekordy o metodzie GET
 * [X] Wybrać rekordy o kodzie statusu 200
-* [X] Usunąć rekordy zawierające odwołania do plików graficznych (jpg, gif, bmp, xmb
-itp.)
+* [X] Usunąć rekordy zawierające odwołania do plików graficznych (jpg, gif, bmp, xmb itp.)
 * [ ] Zidentyfikować użytkowników
 * [ ] Wyodrębnić sesje, przyjmując wybrany odstęp czasowy
 * [ ] Wybrać najbardziej popularne strony, wyznaczyć liczbę odwołań do nich i obliczyć
