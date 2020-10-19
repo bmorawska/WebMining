@@ -1,6 +1,6 @@
-###Ćwiczenie nr 1
+### Ćwiczenie nr 1
 
-#####Zajęcia nr 1
+##### Zajęcia nr 1
 
 * [X] Zainstalować oprogramowanie weka (Open Source) http://www.cs.waikato.ac.nz/ml/weka/ 
 * [X] Zapoznać się z funkcjami oprogramowania (Preprocess, Cluster, Associate)
@@ -8,9 +8,9 @@
 * [X] Obciąć wybrany plik do 50000 rekordów
 * [X] Powtórzyć algorytmy analizy klastrowej i budowania reguł asocjacyjnych
 
-###Ćwiczenie nr 2
+### Ćwiczenie nr 2
 
-####Zajęcia nr 2
+#### Zajęcia nr 2
 
 * [X] Wyodrębnić zmienne: data, godzina, metoda, adres strony, protokół
 * [X] Wybrać rekordy o metodzie GET
