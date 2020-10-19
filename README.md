@@ -19,7 +19,7 @@ Jego skrócona wersja (do 50000 rekordów) to ``short.csv``.
 * [X] Wybrać rekordy o metodzie GET
 * [X] Wybrać rekordy o kodzie statusu 200
 * [X] Usunąć rekordy zawierające odwołania do plików graficznych (jpg, gif, bmp, xmb itp.)
-* [ ] Zidentyfikować użytkowników
-* [ ] Wyodrębnić sesje, przyjmując wybrany odstęp czasowy
+* [X] Zidentyfikować użytkowników (``users.csv``)
+* [X] Wyodrębnić sesje, przyjmując wybrany odstęp czasowy (``sessions.csv``)
 * [ ] Wybrać najbardziej popularne strony, wyznaczyć liczbę odwołań do nich i obliczyć
 jaki jest to procent całości 
