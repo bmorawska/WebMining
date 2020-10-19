@@ -53,7 +53,7 @@ for line in tqdm(lines):
 
     head_parts = head.split(sep=' ')
     method = head_parts[0]
-    address = head_parts[1].replace(',', '').replace(' ', '').lower()
+    address = head_parts[1].replace(',', '').replace(' ', '').replace('%', '').lower()
 
     try:
         protocol = head_parts[2]
@@ -111,5 +111,10 @@ else:
              '@ATTRIBUTE address STRING\n' \
              '@ATTRIBUTE protocol {HTTP/1.0,None,HTTP/V1.0}\n\n' \
              '@DATA'
+
+with open(OUTPUT_FILENAME, 'r+') as f:
+    content = f.read()
+    f.seek(0, 0)
+    f.write(header.rstrip('\r') + '\n' + content)
 
 print('Skończone.')

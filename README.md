@@ -17,7 +17,7 @@
 * [X] Wybrać rekordy o kodzie statusu 200
 * [X] Usunąć rekordy zawierające odwołania do plików graficznych (jpg, gif, bmp, xmb
 itp.)
-5. Zidentyfikować użytkowników
-6. Wyodrębnić sesje, przyjmując wybrany odstęp czasowy
-7. Wybrać najbardziej popularne strony, wyznaczyć liczbę odwołań do nich i obliczyć
+* [ ] Zidentyfikować użytkowników
+* [ ] Wyodrębnić sesje, przyjmując wybrany odstęp czasowy
+* [ ] Wybrać najbardziej popularne strony, wyznaczyć liczbę odwołań do nich i obliczyć
 jaki jest to procent całości 

@@ -2903,7 +2903,7 @@
 30-06-1995,22:36:27,GET,/shuttle/missions/sts-71/sts-71-day-02-highlights.html,HTTP/1.0
 30-06-1995,22:36:29,GET,/shuttle/countdown/,HTTP/1.0
 30-06-1995,22:36:36,GET,/history/apollo/apollo-11/movies/,HTTP/1.0
-30-06-1995,22:36:48,GET,/htbin/wais.pl?video%20images,HTTP/1.0
+30-06-1995,22:36:48,GET,/htbin/wais.pl?video20images,HTTP/1.0
 30-06-1995,22:36:51,GET,/shuttle/missions/missions.html,HTTP/1.0
 30-06-1995,22:36:52,GET,/shuttle/countdown/countdown.html,HTTP/1.0
 30-06-1995,22:36:55,GET,/facilities/lc39a.html,HTTP/1.0
@@ -10842,7 +10842,7 @@
 01-07-1995,09:21:50,GET,/images/,HTTP/1.0
 01-07-1995,09:21:54,GET,/shuttle/missions/sts-71/sts-71-press-kit.txt,HTTP/1.0
 01-07-1995,09:21:55,GET,/,HTTP/1.0
-01-07-1995,09:21:57,GET,/htbin/wais.pl?hubble%20space%20telescope,HTTP/1.0
+01-07-1995,09:21:57,GET,/htbin/wais.pl?hubble20space20telescope,HTTP/1.0
 01-07-1995,09:21:58,GET,/icons/image.xbm,HTTP/1.0
 01-07-1995,09:21:58,GET,/icons/blank.xbm,HTTP/1.0
 01-07-1995,09:21:58,GET,/icons/menu.xbm,HTTP/1.0
@@ -10898,7 +10898,7 @@
 01-07-1995,09:23:43,GET,/shuttle/missions/sts-52/,HTTP/1.0
 01-07-1995,09:23:44,GET,/shuttle/missions/sts-69/sounds/,HTTP/1.0
 01-07-1995,09:23:45,GET,/shuttle/countdown/,HTTP/1.0
-01-07-1995,09:23:46,GET,/htbin/wais.pl?hubble%20space%20telescope%20images,HTTP/1.0
+01-07-1995,09:23:46,GET,/htbin/wais.pl?hubble20space20telescope20images,HTTP/1.0
 01-07-1995,09:23:47,GET,/facts/faq02.html,HTTP/1.0
 01-07-1995,09:23:49,GET,/shuttle/missions/sts-71/,HTTP/1.0
 01-07-1995,09:23:49,GET,/shuttle/missions/sts-69/,HTTP/1.0
@@ -10935,7 +10935,7 @@
 01-07-1995,09:25:13,GET,/shuttle/missions/missions.html,HTTP/1.0
 01-07-1995,09:25:14,GET,/history/apollo/apollo-9/apollo-9.html,HTTP/1.0
 01-07-1995,09:25:16,GET,/shuttle/missions/sts-71/mission-sts-71.html,HTTP/1.0
-01-07-1995,09:25:19,GET,/htbin/wais.pl?hst%20pictures,HTTP/1.0
+01-07-1995,09:25:19,GET,/htbin/wais.pl?hst20pictures,HTTP/1.0
 01-07-1995,09:25:26,GET,/,HTTP/1.0
 01-07-1995,09:25:29,GET,/history/apollo/apollo-10/apollo-10.html,HTTP/1.0
 01-07-1995,09:25:29,GET,/shuttle/missions/sts-71/images/images.html,HTTP/1.0
@@ -10950,7 +10950,7 @@
 01-07-1995,09:26:01,GET,/,HTTP/1.0
 01-07-1995,09:26:04,GET,/shuttle/missions/sts-71/sts-71-press-kit.txt,HTTP/1.0
 01-07-1995,09:26:09,GET,/shuttle/countdown/,HTTP/1.0
-01-07-1995,09:26:09,GET,/htbin/wais.pl?apollo%2013%20transcript,HTTP/1.0
+01-07-1995,09:26:09,GET,/htbin/wais.pl?apollo201320transcript,HTTP/1.0
 01-07-1995,09:26:11,GET,/shuttle/countdown/,HTTP/1.0
 01-07-1995,09:26:15,GET,/htbin/wais.pl,HTTP/1.0
 01-07-1995,09:26:19,GET,/,HTTP/1.0
@@ -14661,7 +14661,7 @@
 01-07-1995,12:49:44,GET,/shuttle/missions/sts-71/mission-sts-71.html,HTTP/1.0
 01-07-1995,12:49:46,GET,/facilities/slf.html,HTTP/1.0
 01-07-1995,12:49:46,GET,/shuttle/countdown/,HTTP/1.0
-01-07-1995,12:49:48,GET,/htbin/wais.pl?discovrey%27s+launch,HTTP/1.0
+01-07-1995,12:49:48,GET,/htbin/wais.pl?discovrey27s+launch,HTTP/1.0
 01-07-1995,12:49:52,GET,/history/apollo/apollo-17/,HTTP/1.0
 01-07-1995,12:49:53,GET,/icons/text.xbm,HTTP/1.0
 01-07-1995,12:49:53,GET,/icons/image.xbm,HTTP/1.0
@@ -14676,7 +14676,7 @@
 01-07-1995,12:50:26,GET,/shuttle/missions/sts-71/movies/movies.html,HTTP/1.0
 01-07-1995,12:50:27,GET,/shuttle/countdown/,HTTP/1.0
 01-07-1995,12:50:27,GET,/history/apollo/apollo-13/apollo-13-info.html,HTTP/1.0
-01-07-1995,12:50:34,GET,/htbin/wais.pl?discovrey%27s+pithers,HTTP/1.0
+01-07-1995,12:50:34,GET,/htbin/wais.pl?discovrey27s+pithers,HTTP/1.0
 01-07-1995,12:50:40,GET,/shuttle/missions/sts-71/mission-sts-71.html,HTTP/1.0
 01-07-1995,12:50:43,GET,/shuttle/countdown/,HTTP/1.0
 01-07-1995,12:50:43,GET,/history/apollo/apollo-13/sounds/,HTTP/1.0
@@ -17118,7 +17118,7 @@
 01-07-1995,14:45:01,GET,/shuttle/missions/51-l/mission-51-l.html,HTTP/1.0
 01-07-1995,14:45:02,GET,/history/apollo/apollo-13/apollo-13.html,HTTP/1.0
 01-07-1995,14:45:06,GET,/history/history.html,HTTP/1.0
-01-07-1995,14:45:07,GET,/htbin/wais.pl?led%20and%20plant,HTTP/1.0
+01-07-1995,14:45:07,GET,/htbin/wais.pl?led20and20plant,HTTP/1.0
 01-07-1995,14:45:10,GET,/history/apollo/apollo-13/,HTTP/1.0
 01-07-1995,14:45:12,GET,/history/rocket-history.txt,HTTP/1.0
 01-07-1995,14:45:21,GET,/history/apollo/apollo-13/news/,HTTP/1.0
