@@ -20,6 +20,8 @@ Jego skrócona wersja (do 50000 rekordów) to ``short.csv``.
 * [X] Wybrać rekordy o kodzie statusu 200
 * [X] Usunąć rekordy zawierające odwołania do plików graficznych (jpg, gif, bmp, xmb itp.)
 * [X] Zidentyfikować użytkowników (``users.csv``)
-* [X] Wyodrębnić sesje, przyjmując wybrany odstęp czasowy (``sessions.csv``)
+* [X] Wyodrębnić sesje, przyjmując wybrany odstęp czasowy (``sessions_singles_removed.csv`` -> w ``sessions.csv``
+są tylko te rekordy, w których w założonym czasie odwiedzono więcej niż jedną stronę. W ``sessions_singles_removed.csv``
+nie są usunięte te przypadki, w których w czasie sesji odwiedzona została tylko jedna strona)
 * [X] Wybrać najbardziej popularne strony, wyznaczyć liczbę odwołań do nich (``most_popular_sites.csv``)
  i obliczyć jaki jest to procent całości (``percent_of_occurences.csv``)
