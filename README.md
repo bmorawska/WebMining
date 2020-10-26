@@ -25,3 +25,23 @@ są tylko te rekordy, w których w założonym czasie odwiedzono więcej niż je
 nie są usunięte te przypadki, w których w czasie sesji odwiedzona została tylko jedna strona)
 * [X] Wybrać najbardziej popularne strony, wyznaczyć liczbę odwołań do nich (``most_popular_sites.csv``)
  i obliczyć jaki jest to procent całości (``percent_of_occurences.csv``)
+ 
+### Ćwiczenie nr 3
+
+#### Zajęcia nr 3
+
+* [X] Wybrać strony dla których liczba odwiedzin była większa niż 0.5% (skrypt ``trending.py``, 
+a wynik w ``percent_of_occurences.csv`` )
+* [ ] Nadać atrybuty sesjom:
+    * [?] Czas sesji (Czy to ma być z tego znacznika czasu? Bo jak tak to nie ma to sensu.)
+    * [X] Liczba działań w czasie sesji
+    * [X] Przeciętny czas na stronę
+    * [X] Zmienne flagowe dla stron wybranych w p. 1 (przeprowadzić transformację
+koszykową)
+* [ ] Zapisać plik danych w formacie arff (przykłady w katalogu „Data” programu Weka)
+* [ ] Wykonać analizę klastrową sesji przy pomocy programu „Weka”
+* [ ] Wyciągnąć wnioski
+* [ ] Dla każdego zidentyfikowanego użytkownika nadać mu atrybuty odpowiadające
+odwiedzanym stronom
+* [ ] Dokonać analizy klastrowej użytkowników.
+* [ ] Wyciągnąć wnioski 
