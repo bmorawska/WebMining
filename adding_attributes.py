@@ -1,5 +1,4 @@
 import ast
-
 import numpy as np
 import pandas as pd
 
@@ -12,32 +11,26 @@ sessions.set_index('sessionID', inplace=True)
 sites = np.array(pd.read_csv(INPUT_FILE_MOST_POPULAR_SITES, usecols=[0]).values.tolist()).flatten()
 
 cols = ['sessionID']
-# cols.extend(sites)
+cols.extend(sites)
 attributes = pd.DataFrame(columns=cols)
 attributes['sessionID'] = sessions.index
 attributes.set_index('sessionID', inplace=True)
 
 # Transformacja koszykowa
-# for col in cols:
-#    attributes[col] = False
+for col in cols:
+    attributes[col] = 0
 
-# len_sites = len(sites)
-# for i, row in sessions.iterrows():
-#    vp = ast.literal_eval(row.visited_pages)
-#    for site in vp:
-#        if site in sites:
-#            attributes.loc[i][site] = True
+len_sites = len(sites)
+for i, row in sessions.iterrows():
+    vp = ast.literal_eval(row.visited_pages)
+    for site in vp:
+        if site in sites:
+            attributes.loc[i][site] = 1
 
 # Wyznaczanie czasu "sesji" w sekundach sensowny
 sessions.end_time = pd.to_datetime(sessions.end_time)
 sessions.start_time = pd.to_datetime(sessions.start_time)
 attributes['sessionTime'] = (sessions.end_time - sessions.start_time).dt.seconds
-
-# Timestamp ale nie wiem gdzie to ma być?
-# first_log_time = pd.to_datetime('30-06-1995 20:00:01')
-# sessions.end_time = pd.to_datetime(sessions.end_time)
-# sessions.start_time = pd.to_datetime(sessions.start_time)
-# attributes['sessionTime'] = ((sessions.end_time - first_log_time).dt.days * 24 * 60 * 60)
 
 # Wyznaczanie liczby działań w czasie sesji
 attributes['done_things'] = sessions.visited_pages
@@ -45,5 +38,26 @@ attributes['done_things'] = attributes['done_things'].apply(lambda x: len(ast.li
 
 # Wyznaczanie przyciętnego czasu sesji
 attributes['average_time'] = attributes['sessionTime'] / attributes['done_things']
+attributes['user'] = "\"" + sessions['user'].astype(str) + "\""
+attributes['start_time'] = "\"" + sessions['start_time'].astype(str) + "\""
+attributes['end_time'] = "\"" + sessions['end_time'].astype(str) + "\""
+attributes.to_csv('session_attributes.arff', header=False)
 
-pass
+header = '@RELATION session_attributes.arff\n\n' + \
+         '@ATTRIBUTE sessionID STRING\n'
+
+for site in sites:
+    header += '@ATTRIBUTE ' + site + ' {0, 1}\n'
+
+header += '@ATTRIBUTE session_time NUMERIC\n' + \
+          '@ATTRIBUTE visited_sites NUMERIC\n' + \
+          '@ATTRIBUTE avg_time_per_site NUMERIC\n' + \
+          '@ATTRIBUTE user\n' + \
+          '@ATTRIBUTE start_time DATE "yyyy-MM-dd HH:mm:ss"\n' + \
+          '@ATTRIBUTE end_time DATE "yyyy-MM-dd HH:mm:ss"\n\n' + \
+          '@DATA'
+
+with open('session_attributes.arff', 'r+') as f:
+    content = f.read()
+    f.seek(0, 0)
+    f.write(header.rstrip('\r') + '\n' + content)
