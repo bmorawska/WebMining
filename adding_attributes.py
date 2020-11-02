@@ -1,4 +1,5 @@
 import ast
+
 import numpy as np
 import pandas as pd
 
@@ -18,6 +19,8 @@ attributes.set_index('sessionID', inplace=True)
 
 # Transformacja koszykowa
 for col in cols:
+    if col == 'sessionID':
+        continue
     attributes[col] = 0
 
 len_sites = len(sites)
@@ -52,7 +55,7 @@ for site in sites:
 header += '@ATTRIBUTE session_time NUMERIC\n' + \
           '@ATTRIBUTE visited_sites NUMERIC\n' + \
           '@ATTRIBUTE avg_time_per_site NUMERIC\n' + \
-          '@ATTRIBUTE user\n' + \
+          '@ATTRIBUTE user STRING\n' + \
           '@ATTRIBUTE start_time DATE "yyyy-MM-dd HH:mm:ss"\n' + \
           '@ATTRIBUTE end_time DATE "yyyy-MM-dd HH:mm:ss"\n\n' + \
           '@DATA'
