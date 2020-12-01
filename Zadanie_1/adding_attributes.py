@@ -46,21 +46,20 @@ attributes['average_time'] = attributes['sessionTime'] / attributes['done_things
 # attributes['end_time'] = "\"" + sessions['end_time'].astype(str) + "\""
 
 # Kategoryzacja
-session_time_categories = ['t<1min', '1min<=t<2min', '3min<=t<5min', '5min<=t<10min', '10min<=t<15min',
-                           '15min<=t<30min']
-session_time_ranges = [0, 1 * 60, 2 * 60, 5 * 60, 10 * 60, 15 * 60, 30 * 60]
-attributes['session_time_categories'] = pd.cut(attributes['average_time'],
+session_time_categories = ['t<2min', '2min<=t<5min', '5min<=t<30min']
+session_time_ranges = [0, 2 * 60, 5 * 60, 30 * 60]
+attributes['session_time_categories'] = pd.cut(attributes['sessionTime'],
                                                session_time_ranges,
                                                labels=session_time_categories)
 
-session_average_time_per_site_categories = ['t<1min', '1min<=t<2min', '2min<=t<5min', '5min<=t<30min']
-session_average_time_ranges = [0, 1 * 60, 2 * 60, 5 * 60, 30 * 60]
+session_average_time_per_site_categories = ['t<2min', '2min<=t<5min', '5min<=t<30min']
+session_average_time_ranges = [0, 2 * 60, 5 * 60, 30 * 60]
 attributes['session_average_time_per_site_categories'] = pd.cut(attributes['average_time'],
                                                                 session_average_time_ranges,
                                                                 labels=session_average_time_per_site_categories)
 
-done_things_categories = ['x<=3', '3<=t<6', '6<=t<10', '10<=t<20', 'x>=20']
-done_things_ranges = [0, 3, 6, 10, 20, 50]
+done_things_categories = ['x<=4', '4<=t<10', 'x>=10']
+done_things_ranges = [0, 4, 10, 50]
 attributes['done_things_categories'] = pd.cut(attributes['done_things'],
                                               done_things_ranges,
                                               labels=done_things_categories)
@@ -76,11 +75,9 @@ for site in sites:
 header += '@ATTRIBUTE session_time NUMERIC\n' + \
           '@ATTRIBUTE visited_sites NUMERIC\n' + \
           '@ATTRIBUTE avg_time_per_site NUMERIC\n' + \
-          '@ATTRIBUTE session_time_categories {t<1min, 1min<=t<2min, 3min<=t<5min, 5min<=t<10min, ' \
-          '10min<=t<15min, 15min<=t<30min}\n' + \
-          '@ATTRIBUTE session_average_time_per_site_categories {t<1min, 1min<=t<2min, 2min<=t<5min, ' \
-          '5min<=t<30min}\n' + \
-          '@ATTRIBUTE done_things_categories {x<=3, 3<=t<6, 6<=t<10, 10<=t<20, x>=20}\n\n' + \
+          '@ATTRIBUTE session_time_categories {t<2min, 2min<=t<5min, 5min<=t<30min}\n' + \
+          '@ATTRIBUTE session_average_time_per_site_categories {t<2min, 2min<=t<5min, 5min<=t<30min}\n' + \
+          '@ATTRIBUTE done_things_categories {x<=4, 4<=t<10, x>=10}\n\n' + \
           '@DATA'
 
 with open('session_attributes.arff', 'r+') as f:
