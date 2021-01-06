@@ -1,4 +1,5 @@
 import pandas as pd
+from collections import Counter
 
 
 def jacquard(A: list, B: list) -> float:
@@ -12,7 +13,6 @@ def jacquard(A: list, B: list) -> float:
 
 THRESHOLD = 0.2
 NUMBER_OF_SITES_TO_RECOMMEND = 10
-
 
 # szukamy takich par <USER> [<VISITED SITES>]
 data = pd.read_csv('data_full.csv')
@@ -46,7 +46,6 @@ data = data[data['sim'] >= THRESHOLD]
 print(f'Rozmiar grupy z podobienstwem na poziomie {THRESHOLD} lub wiekszym: '
       f'{round(((data.shape[0]) / float(size) * 100), 2)}%\n')
 
-
 recommended_sites = []
 for _, row in data.iterrows():
     for site in row['sites']:
@@ -55,6 +54,10 @@ for _, row in data.iterrows():
         if (site not in jack_sites) and (site not in recommended_sites):
             recommended_sites.append(site)
 
+recommended_sites = Counter(recommended_sites).most_common()
+if len(recommended_sites) >= NUMBER_OF_SITES_TO_RECOMMEND:
+    recommended_sites = recommended_sites[: NUMBER_OF_SITES_TO_RECOMMEND]
+
 print(f'Strony proponowane dla {jack_ip}:')
 for idx, site in enumerate(recommended_sites):
-    print(f'{idx + 1}. {site}')
+    print(f'{idx + 1}. {site[0]}')
