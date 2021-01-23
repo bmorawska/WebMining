@@ -41,3 +41,5 @@ atrybutów.
 2. Losowo utworzyć użytkownika.
 3. Znaleźć najbliższą mu grupę.
 4. Zarekomendować mu strony, na które wchodziła większość użytkowników grupy.
+
+<img src="Zadanie_3/recommendation.gif" width="250" height="200" />
