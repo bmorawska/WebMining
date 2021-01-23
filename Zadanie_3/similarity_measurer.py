@@ -20,7 +20,7 @@ pages = list(map(lambda x: x[:-1], pages))
 
 jack_ip = 'Jack.Strong'
 # jack_visited = random_user_generator(len(pages), 0.7)
-jack_visited = [1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0]
+jack_visited = [0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0]
 
 print(f"{jack_ip}: {jack_visited}")
 
